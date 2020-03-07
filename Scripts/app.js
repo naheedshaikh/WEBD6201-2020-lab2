@@ -21,12 +21,12 @@ class Contact
 // JavaScript Class named User
 class User
 {
-    constructor(firstName = "", lastName = "", userName = "", email = "", password = "")
+    constructor(firstName = "", lastName = "", userName = "", emailAddress = "", password = "")
     {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
-        this.email = email;
+        this.emailAddress = emailAddress;
         this.password = password;
     }
 }  
@@ -395,12 +395,11 @@ let app;
             $("#logout").hide();
         }
 
-    clearForm($("#registerForm"));
-});
+         clearForm($("#registerForm"));
+    });
+ }
 
-    }
-
-    // function to clear all the inputs 
+    // function to clear all the input texts 
     function clearForm(selector)
         {
             $(selector)[0].reset();
@@ -423,8 +422,6 @@ let app;
             $(selector).css("border", "1px solid #ced4da");
         }
     }
-    }
-
     /**
      * Main Program entry point is here
      *
@@ -433,9 +430,6 @@ let app;
     {
        
     }
-    
-    
-
     window.addEventListener("load", Start);
 })(app || (app = {}));
 
