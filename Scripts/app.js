@@ -362,6 +362,67 @@ let app;
         {
             $("#confirmPassword").select();
         });
+        $("#registerForm").submit ((e)=>
+    {
+        let firstName = $("#firstName").val();
+        let lastName = $("#lastName").val();
+        let emailAddress = $("#emailAddress").val();
+        let username = $("#username").val();
+        let password = $("#password").val();
+        
+        User.firstName = firstName;
+        User.lastName = lastName;
+        User.emailAddress = emailAddress;
+        User.username = username;
+        User.password = password;
+
+        console.log(`Name: ${firstName}` + ` ${lastName}`);
+        console.log(`Email Address: ${emailAddress}`);
+        console.log(`Username: ${username}`);
+
+        if($("#registerForm")[0].checkValidity() == false)
+        {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log("form not valid");
+        }
+        else
+        {
+            e.preventDefault();
+            e.stopPropagation();
+            $("#registerForm")[0].reset();
+            $("#login").show();
+            $("#logout").hide();
+        }
+
+    clearForm($("#registerForm"));
+});
+
+    }
+
+    // function to clear all the inputs 
+    function clearForm(selector)
+        {
+            $(selector)[0].reset();
+            $("#errorMessage").hide();
+        }
+
+    // function to display or hide error messages 
+    function validateInput(selector, condition, errorMessage)
+    {
+        if(condition)
+        {
+            $("#errorMessage").show();
+            $("#errorMessage").text(errorMessage);
+            $(selector).select();
+            $(selector).css("border", "2px solid red");
+        }
+        else
+        {
+            $("#errorMessage").hide();
+            $(selector).css("border", "1px solid #ced4da");
+        }
+    }
     }
 
     /**
