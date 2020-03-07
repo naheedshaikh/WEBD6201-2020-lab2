@@ -1,3 +1,5 @@
+
+// JavaScript Class named Contact
 class Contact
 {
     constructor(contactName = "", emailAddress = "", contactNumber = "", contactMessage = "")
@@ -9,6 +11,18 @@ class Contact
     }
 }
 
+// JavaScript Class named User
+class User
+{
+    constructor(firstName = "", lastName = "", userName = "", email = "", password = "")
+    {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
+    }
+}  
 
 
 
@@ -253,7 +267,7 @@ let app;
              
             $("#login").before ($("<li>").addClass("navbar-text").text('Welcome '+ userName)).show();
             console.log(userName);
-            
+
             e.preventDefault();
             e.stopPropagation();
             $("#loginForm")[0].reset();
