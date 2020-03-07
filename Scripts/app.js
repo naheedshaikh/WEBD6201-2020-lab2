@@ -294,6 +294,61 @@ let app;
 
         $("#errorMessage").hide();
         $("#firstName").select();
+
+        // First Name Event
+    $("#firstName").blur((e)=>
+    {
+        validateInput("#firstName",( $("#firstName").val().length < 2),"First Name is too short.");
+    });
+
+    $("#firstName").focus((e)=>
+    {
+        $("#firstName").select();
+    });
+
+    // Last Name Event
+    $("#lastName").blur((e)=>
+    {
+        validateInput("#lastName",( $("#lastName").val().length < 2),"Last Nameis too short.");
+    });
+
+    $("#lastName").focus((e)=>
+    {
+        $("#lastName").select();
+    });
+
+    // Email Event
+    $("#emailAddress").blur((e)=>
+    {
+        validateInput("#emailAddress",($("#emailAddress").val().length < 2) || (!$("#emailAddress").val().includes("@")),"Invalid Email Address");
+    });
+
+    $("#emailAddress").focus((e)=>
+    {
+        $("#emailAddress").select();
+    });
+
+    // Username Events
+    $("#username").blur((e)=>
+    {
+        validateInput("#username",( $("#username").val().length < 2),"User name must not be less then 2 characters.");
+    });
+
+    $("#userame").focus((e)=>
+    {
+        $("#userame").select();
+    });
+
+    // Password Events
+    $("#password").blur((e)=>
+    {
+        validateInput("#password",($("#password").val().length < 2),"Password must be atleast 6 characters in length.");
+    });
+
+    $("#password").focus((e)=>
+    {
+        $("#password").select();
+    });
     }
 
     /**
