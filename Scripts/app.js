@@ -284,10 +284,16 @@ let app;
         });
 
     }
-
+    /************** Register Page **************/
     function DisplayRegisterContent()
     {
         document.title = "WEBD6201 - Register";
+
+        let errorMessage = $("<div>").attr("id", "errorMessage").addClass("alert alert-danger");
+        $(".hint-text").append(errorMessage);
+
+        $("#errorMessage").hide();
+        $("#firstName").select();
     }
 
     /**
