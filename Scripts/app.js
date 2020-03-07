@@ -238,6 +238,8 @@ let app;
         document.title = "WEBD6201 - Projects";
     }
 
+    /************** Login Page **************/
+    
     function DisplayLoginContent()
     {
         document.title = "WEBD6201 - Login";
@@ -245,6 +247,13 @@ let app;
         $("#loginForm").submit  ((e)=>
         {
            
+            //userName show at the nevbar after contact us element
+            let userName = $('input#contactName').val();
+
+             
+            $("#login").before ($("<li>").addClass("navbar-text").text('Welcome '+ userName)).show();
+            console.log(userName);
+            
             e.preventDefault();
             e.stopPropagation();
             $("#loginForm")[0].reset();
