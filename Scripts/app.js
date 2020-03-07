@@ -1,4 +1,11 @@
-
+/**
+* Name: Naheed Shaikh
+* Stdent Id: 100713081
+* Description: Lab 2 - jQuery & Form Validation
+* Date Completed: 06-MAR-2020 
+* Source Code:https://github.com/durhamprogrammer/WEBD6201-W2020-Lesson6 
+* My Github Link: https://github.com/naheedshaikh/WEBD6201-2020-lab2.git 
+*/
 // JavaScript Class named Contact
 class Contact
 {
